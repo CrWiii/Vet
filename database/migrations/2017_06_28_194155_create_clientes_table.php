@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 class CreateClientesTable extends Migration{
     public function up(){
         Schema::create('clientes', function (Blueprint $table) {
-            $table->integer('Cod_Cliente')->index();
+            $table->increments('Cod_Cliente');
             $table->string('Nom_cliente')->nullable();
             $table->string('Ape_cliente')->nullable();
             $table->string('Direccion')->nullable();

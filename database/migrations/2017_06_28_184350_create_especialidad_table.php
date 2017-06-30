@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 class CreateEspecialidadTable extends Migration{
     public function up(){
         Schema::create('especialidad', function (Blueprint $table) {
-            $table->integer('Cod_especialidad')->index();
+            $table->increments('Cod_especialidad');
             $table->string('Descripcion')->nullable();
             $table->boolean('state')->nullable();
             $table->integer('created_by')->nullable();

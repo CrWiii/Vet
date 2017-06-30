@@ -8,7 +8,7 @@ class CreateTipoMascotaTable extends Migration{
 
     public function up(){
         Schema::create('tipo_mascota', function (Blueprint $table) {
-            $table->integer('Cod_tipo')->index();
+            $table->increments('Cod_tipo');
             $table->string('Descripcion')->nullable();
             $table->boolean('state')->nullable();
             $table->integer('created_by')->nullable();

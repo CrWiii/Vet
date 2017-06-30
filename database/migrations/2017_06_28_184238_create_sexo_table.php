@@ -8,7 +8,7 @@ class CreateSexoTable extends Migration{
 
     public function up(){
         Schema::create('sexo', function (Blueprint $table) {
-            $table->integer('Cod_sexo')->index();
+            $table->increments('Cod_sexo');
             $table->string('Descripcion')->nullable();
             $table->boolean('state')->nullable();
             $table->integer('created_by')->nullable();
