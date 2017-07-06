@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTipoMascotaTable extends Migration{
+class CreatePersonaTable extends Migration{
 
     public function up(){
-        Schema::create('tipo_mascota', function (Blueprint $table) {
-            $table->increments('cod_tipo');
-            $table->string('descripcion')->nullable();
+        Schema::create('persona', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('descripcion');
             $table->boolean('state')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
@@ -18,6 +18,7 @@ class CreateTipoMascotaTable extends Migration{
     }
 
     public function down(){
-        Schema::dropIfExists('tipo_mascota');
+        Schema::dropIfExists('persona');
+    }
     }
 }

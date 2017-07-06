@@ -111,8 +111,7 @@
                             <!--<li class="user-header" style="height: 85px !important">
                                 <img src="/dist/img/avatar5.png" class="img-circle" alt="User Image" />
                                 <p>
-                                    {{ Auth::user()->name }}
-                                    <small>{{ trans('adminlte_lang::message.login') }}</small>
+                                    
                                 </p>
                             </li>-->
                             <!-- Menu Body -->

@@ -3,7 +3,7 @@
         @if (! Auth::guest())
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="/dist/img/avatar5.png" class="img-circle" alt="User Image" />
+                    <img src="/dist/img/avatar5.png" height="35" class="img-circle" alt="User Image" />
                     <div style="margin: 35px;"></div>
                 </div>
                 <div class="pull-left info">

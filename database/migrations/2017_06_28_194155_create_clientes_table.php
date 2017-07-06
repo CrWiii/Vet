@@ -7,24 +7,24 @@ use Illuminate\Database\Migrations\Migration;
 class CreateClientesTable extends Migration{
     public function up(){
         Schema::create('clientes', function (Blueprint $table) {
-            $table->increments('Cod_Cliente');
-            $table->string('Nom_cliente')->nullable();
-            $table->string('Ape_cliente')->nullable();
-            $table->string('Direccion')->nullable();
-            $table->string('Tel_cliente')->nullable();
-            $table->string('DNI')->nullable();
-            $table->integer('Cod_sexo')->unsigned()->index();
-            $table->string('Email')->nullable();
-            $table->string('Sitio_web')->nullable();
-            $table->string('Num_registro')->nullable();
-            $table->string('Fec_registro')->nullable();
-            $table->string('Giro')->nullable();
+            $table->increments('cod_Cliente');
+            $table->string('nom_cliente')->nullable();
+            $table->string('ape_cliente')->nullable();
+            $table->string('direccion')->nullable();
+            $table->string('tel_cliente')->nullable();
+            $table->string('dni')->nullable();
+            $table->integer('cod_sexo')->unsigned()->index();
+            $table->string('email')->nullable();
+            $table->string('sitio_web')->nullable();
+            $table->string('num_registro')->nullable();
+            $table->string('fec_registro')->nullable();
+            $table->string('giro')->nullable();
             $table->boolean('state')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();
 
-            $table->foreign('Cod_sexo')->references('Cod_sexo')->on('sexo');
+            $table->foreign('cod_sexo')->references('cod_sexo')->on('sexo');
         });
     }
 
